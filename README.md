@@ -2,12 +2,12 @@
 
 Reproducible workflow to forecast daily complaints for the next 90 days using STL decomposition and HistGradientBoosting models.
 
-Repo: [UniCandice/TA-LLY](https://github.com/UniCandice/TA-LLY)
+Repo: [UniCandice/Technical-Assessment-LiyuanLIU](https://github.com/UniCandice/Technical-Assessment-LiyuanLIU)
 
 ## Project layout
 
 ```text
-TA-LLY/
+Technical-Assessment-LiyuanLIU/
 ├── complaints_forecast_assessment.ipynb   # main analysis notebook
 ├── data/                                  # raw Excel inputs
 ├── src/forecasting.py                     # reusable modelling helpers
@@ -30,8 +30,8 @@ TA-LLY/
 
 ```bash
 # clone
-git clone https://github.com/UniCandice/TA-LLY.git
-cd TA-LLY
+git clone https://github.com/UniCandice/Technical-Assessment-LiyuanLIU.git
+cd Technical-Assessment-LiyuanLIU
 
 # create environment (recommended)
 python -m venv .venv
