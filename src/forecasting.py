@@ -58,6 +58,12 @@ def score_forecast(y_true: pd.Series, y_pred: pd.Series) -> dict:
     return {"MAE": mae, "RMSE": rmse, "MAPE_pct": mape}
 
 
+def naive_forecast(history: pd.Series, horizon: int) -> pd.Series:
+    """Repeat the last observed value for horizon days (random-walk / last-value naive)."""
+    future_index = pd.date_range(history.index.max() + pd.Timedelta(days=1), periods=horizon, freq="D")
+    return pd.Series(float(history.iloc[-1]), index=future_index, name="prediction")
+
+
 def seasonal_naive_forecast(history: pd.Series, horizon: int, season: int = 7) -> pd.Series:
     """Repeat the last full seasonal cycle for horizon days."""
     last_cycle = history.iloc[-season:].to_numpy()
